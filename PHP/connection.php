@@ -5,7 +5,7 @@ class DBConnection
   const host = 'localhost';
   const user = 'root';
   const pwd = 'root';
-  const db = 'test';
+  const db = 'tecweb';
 
   public $conn;
 
