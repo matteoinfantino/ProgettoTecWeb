@@ -75,17 +75,17 @@ $_SESSION ['paginaCorr']="login";
 				<legend> <span xml:lang="en">Login</span></legend>
 				<ul>
 					<li>
-						<label for="email" xml:lang="en">Email</label>:
+						<label for="email" xml:lang="en">Email:</label>
 						<input id="email" name="email" type="text"/>
 					</li>
 					<li>
-						<label for="password" xml:lang="en">Password</label>:
+						<label for="password" xml:lang="en">Password:</label>
 						<input id="password" name="password" type="password"/>
             <?php if(isset($_SESSION['error']['mailErr2'])) {echo '<span class="error">'. $_SESSION['error']['mailErr2'] .'</span>'; unset($_SESSION['error']['mailErr2']); } else {echo "";} ?>
 					</li>
 					<li>
-						<input id="mostraPassword" type="checkbox" onclick="mostraPassword()"/>
-            <label for="mostraPassword">Mostra <span xml:lang="en">Password</span></label>
+						<input id="mostraPassword2" type="checkbox" onclick="mostraPassword()"/>
+            <label for="mostraPassword2">Mostra <span xml:lang="en">Password</span></label>
           </li>
 					<li id="buttons-login">
 						<input value="Login" class="button" id="login" name="login" type="submit" />
