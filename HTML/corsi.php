@@ -58,11 +58,8 @@ else {
 
 </head>
 <body>
-  <noscript>
-    <p id="menuNoScript"><span xml:lang="en">Javascript</span> Disabilitato: Il <a href="#NoJS">men&ugrave;</a> &egrave; visualizzabile in fondo alla pagina</p>
-  </noscript>
 	<div id="nav">
-    <a href="#content" id="hideLink">Vai al contenuto</a>
+    <a href="#content" id="hideLink" xml:lang="en">Skip to content</a>
 		<div id="logo"><img src="../IMG/logo1.png" alt="Logo Energya"/></div>
     <button id="menuIcon" title="menuIcon" onclick="menuHamburger()" ><img src="../IMG/hamburger_icon.png" alt="icona menu"/></button>
     <ul class="menuItems" id="menuu" >
@@ -82,6 +79,10 @@ else {
 	</div>
 
   <?php require_once __DIR__ . DIRECTORY_SEPARATOR . "../PHP" . DIRECTORY_SEPARATOR . "userbar.php";?>
+
+  <noscript>
+    <p id="menuNoScript"><span xml:lang="en">Javascript</span> Disabilitato: Il <a href="#NoJS">men&ugrave;</a> &egrave; visualizzabile in fondo alla pagina</p>
+  </noscript>
 
 	<div id="content">
 

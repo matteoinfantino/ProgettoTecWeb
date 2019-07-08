@@ -18,6 +18,7 @@ if ((!isset($_SESSION["email"]))||($_SESSION["email"]!="admin@admin.it")){
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
 <title>Energya Fitness Club</title>
 <meta name="title" content="Energya Fitness Club"/>
 <meta name="description" content="Energya - un luogo per tutti quelli che amano la palestra e vogliono sentirsi come in famiglia!"/>
@@ -37,11 +38,8 @@ if ((!isset($_SESSION["email"]))||($_SESSION["email"]!="admin@admin.it")){
 
 </head>
 <body>
-  <noscript>
-    <p id="menuNoScript"><span xml:lang="en">Javascript</span> Disabilitato: Il <a href="#NoJS">men&ugrave;</a> &egrave; visualizzabile in fondo alla pagina</p>
-  </noscript>
   <div id="nav">
-    <a href="#content" id="hideLink">Vai al contenuto</a>
+    <a href="#content" id="hideLink" xml:lang="en">Skip to content</a>
 	  <div id="logo"><img src="../IMG/logo1.png" alt="Logo Energya"/></div>
     <button id="menuIcon" title="menuIcon" onclick="menuHamburger()" ><img src="../IMG/hamburger_icon.png" alt="icona menu"/></button>
 	  <ul class="menuItems" id="menuu" >
@@ -61,6 +59,10 @@ if ((!isset($_SESSION["email"]))||($_SESSION["email"]!="admin@admin.it")){
 
 	<?php require_once __DIR__ . DIRECTORY_SEPARATOR . "../PHP" . DIRECTORY_SEPARATOR . "userbar.php";
 	 ?>
+
+   <noscript>
+     <p id="menuNoScript"><span xml:lang="en">Javascript</span> Disabilitato: Il <a href="#NoJS">men&ugrave;</a> &egrave; visualizzabile in fondo alla pagina</p>
+   </noscript>
 
 	<div id="content">
 		<div id="breadcrumb">
@@ -100,7 +102,7 @@ if ((!isset($_SESSION["email"]))||($_SESSION["email"]!="admin@admin.it")){
     <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valido!" class="inline"/>
   </div>
 
-  
+
   <noscript>
   	  <ul id="NoJS">
         <li><a href="index.php" xml:lang="en">Home</a></li>

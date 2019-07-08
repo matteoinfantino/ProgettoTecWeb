@@ -53,11 +53,8 @@ if ((!isset($_SESSION["email"]))||($_SESSION["email"]!="admin@admin.it")){
 
 </head>
 <body>
-  <noscript>
-    <p id="menuNoScript"><span xml:lang="en">Javascript</span> Disabilitato: Il <a href="#NoJS">menu</a> &egrave; visualizzabile in fondo alla pagina</p>
-  </noscript>
   <div id="nav">
-    <a href="#content" id="hideLink">Vai al contenuto</a>
+    <a href="#content" id="hideLink" xml:lang="en">Skip to content</a>
 	  <div id="logo"><img src="../IMG/logo1.png" alt="Logo Energya"/></div>
     <button id="menuIcon" title="menuIcon" onclick="menuHamburger()" ><img src="../IMG/hamburger_icon.png" alt="icona menu"/></button>
 	  <ul class="menuItems" id="menuu" >
@@ -77,34 +74,38 @@ if ((!isset($_SESSION["email"]))||($_SESSION["email"]!="admin@admin.it")){
 
 	<?php require_once __DIR__ . DIRECTORY_SEPARATOR . "../PHP" . DIRECTORY_SEPARATOR . "userbar.php";?>
 
+
+  <noscript>
+    <p id="menuNoScript"><span xml:lang="en">Javascript</span> Disabilitato: Il <a href="#NoJS">menu</a> &egrave; visualizzabile in fondo alla pagina</p>
+  </noscript>
+
 	<div id="content">
 		<div id="breadcrumb">
-			<p>Ti trovi in: Pannello di amministrazione >> Rimozione <span xml:lang="en">news</span></p>
+			<p>Ti trovi in: Pannello di amministrazione &gt;&gt; Rimozione <span xml:lang="en">news</span></p>
 		</div>
 
 		<div class="ammin Sx">
       <h1>Rimuovi <span xml:lang="en">News</span></h1>
       <p class="center">Per eliminare una delle <span xml:lang="en">news</span> all'interno della sezione "<span xml:lang="en">News</span>",
          premere il pulsante rimuovi al fianco del titolo corrispondente.</p>
-     <h2 class="successo">
-        <?php
-         if ($_SESSION ['successoR']){
-           echo "Rimozione avvenuta con successo";
-           $_SESSION ['successoR']=0;
-         }
-         else{
-           echo "";
-         }
+         <?php
+          if ($_SESSION ['successoR']){
+            echo "<h2 class=\"successo\">Rimozione avvenuta con successo</h2>";
+            $_SESSION ['successoR']=0;
+          }
+          else{
+            echo "";
+          }
         ?>
-      </h2>
          <?php
            if(!empty($listaNews))
              foreach ($listaNews as $news) {
                echo'
                  <form class="rem" action="../PHP/post_remove_news.php?id='.$news['Id'].'">
                  <fieldset>
-                   <label class="remP">'.$news['Titolo'].'</label><input type="hidden" value="'.$news['Id'].'" name="rimuovi"/>
-                   <input type="submit" class="button" value="Rimuovi '.$news['Titolo'].'" name="submit"/>
+                 <legend>Rimuovi <span xml:lang="en">news</span></legend>
+                   <label class="remP" for="rimuovi'.$news['Id'].'">'.$news['Titolo'].'</label><input type="hidden" value="'.$news['Id'].'" name="rimuovi"/>
+                   <input type="submit" id="rimuovi'.$news['Id'].'" class="button" value="Rimuovi '.$news['Titolo'].'" name="submit"/>
                  </fieldset>
                  </form>';
              }
@@ -115,25 +116,24 @@ if ((!isset($_SESSION["email"]))||($_SESSION["email"]!="admin@admin.it")){
       <h1>Modifica <span xml:lang="en">News</span></h1>
       <p class="center">Per modificare una delle <span xml:lang="en">news</span> all'interno della sezione "<span xml:lang="en">News</span>",
          premere il pulsante modifica al fianco del titolo corrispondente.</p>
-      <h2 class="successo">
          <?php
           if ($_SESSION ['successoM']){
-            echo "Modifica avvenuta con successo";
+            echo "<h2 class=\"successo\">Modifica avvenuta con successo</h2>";
             $_SESSION ['successoM']=0;
           }
           else{
             echo "";
           }
-         ?>
-       </h2>
+        ?>
          <?php
          if(!empty($listaNews)){
            foreach ($listaNews as $news) {
              echo'
                <form class="rem" action="modifica_news_form.php?id='.$news['Id'].'">
                <fieldset>
-                 <label class="remP">'.$news['Titolo'].'</label><input type="hidden" value="'.$news['Id'].'" name="modifica"/>
-                 <input type="submit" class="button" value="Modifica '.$news['Titolo'].'" name="submit"/>
+               <legend>Modifica <span xml:lang="en">news</span></legend>
+                 <label class="remP" for="modifica'.$news['Id'].'">'.$news['Titolo'].'</label><input type="hidden" value="'.$news['Id'].'" name="modifica"/>
+                 <input type="submit" id="modifica'.$news['Id'].'" class="button" value="Modifica '.$news['Titolo'].'" name="submit"/>
                </fieldset>
                </form>';
            }
@@ -151,7 +151,7 @@ if ((!isset($_SESSION["email"]))||($_SESSION["email"]!="admin@admin.it")){
     <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valido!" class="inline"/>
   </div>
 
-  
+
   <noscript>
   	  <ul id="NoJS">
         <li><a href="index.php" xml:lang="en">Home</a></li>

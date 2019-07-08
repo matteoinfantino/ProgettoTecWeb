@@ -50,11 +50,8 @@ if ((!isset($_SESSION["email"]))||($_SESSION["email"]!="admin@admin.it")){
 
 </head>
 <body>
-  <noscript>
-    <p id="menuNoScript"><span xml:lang="en">Javascript</span> Disabilitato: Il <a href="#NoJS">men&ugrave;</a> &egrave; visualizzabile in fondo alla pagina</p>
-  </noscript>
   <div id="nav">
-    <a href="#content" id="hideLink">Vai al contenuto</a>
+    <a href="#content" id="hideLink" xml:lang="en">Skip to content</a>
 	  <div id="logo"><img src="../IMG/logo1.png" alt="Logo Energya"/></div>
     <button id="menuIcon" title="menuIcon" onclick="menuHamburger()" ><img src="../IMG/hamburger_icon.png" alt="icona menu"/></button>
 	  <ul class="menuItems" id="menuu" >
@@ -74,34 +71,38 @@ if ((!isset($_SESSION["email"]))||($_SESSION["email"]!="admin@admin.it")){
 
 	<?php require_once __DIR__ . DIRECTORY_SEPARATOR . "../PHP" . DIRECTORY_SEPARATOR . "userbar.php";?>
 
+  <noscript>
+    <p id="menuNoScript"><span xml:lang="en">Javascript</span> Disabilitato: Il <a href="#NoJS">men&ugrave;</a> &egrave; visualizzabile in fondo alla pagina</p>
+  </noscript>
+
 	<div id="content">
 		<div id="breadcrumb">
-			<p>Ti trovi in: Pannello di amministrazione >> Rimozione corsi</p>
+			<p>Ti trovi in: Pannello di amministrazione &gt;&gt; Rimozione corsi</p>
 		</div>
 
 		<div class="ammin">
       <h1>Rimuovi foto galleria</h1>
       <p class="center">Per eliminare una delle immagini inserite all'interno della sezione "Galleria",
          premere il pulsante rimuovi al fianco del percorso dell'immagine corrispondente.</p>
-      <h2 class="successo">
          <?php
           if ($_SESSION ['successoR']){
-            echo "Rimozione avvenuta con successo";
+            echo "<h2 class=\"successo\">Rimozione avvenuta con successo</h2>";
             $_SESSION ['successoR']=0;
           }
           else{
             echo "";
           }
         ?>
-      </h2>
+
          <?php
              if(!empty($listaGalleria))
                foreach ($listaGalleria as $galleria) {
                  echo'
                    <form class="rem" action="../PHP/post_remove_galleria.php?id='.$galleria['Id'].'">
                    <fieldset>
-                     <label class="remP">'.substr($galleria['Immagine'],7).'</label><input type="hidden" value="'.$galleria['Id'].'" name="rimuovi"/>
-                     <input type="submit" class="button" value="Rimuovi Immagine '.substr($galleria['Immagine'],7).'" name="submit"/>
+                   <legend>Rimuovi foto</legend>
+                     <label class="remP" for="rimuovi'.substr($galleria['Immagine'],7).'">'.substr($galleria['Immagine'],7).'</label><input type="hidden" value="'.$galleria['Id'].'" name="rimuovi"/>
+                     <input type="submit" class="button" id="rimuovi'.substr($galleria['Immagine'],7).'" value="Rimuovi Immagine '.substr($galleria['Immagine'],7).'" name="submit"/>
                    </fieldset>
                    </form>';
                }

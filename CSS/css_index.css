@@ -35,10 +35,6 @@ p{
 	font-weight: bold;
 }
 
-.under{
-	text-decoration: underline;
-}
-
 .clearfix{
 	clear:both;
 }
@@ -511,8 +507,6 @@ CSS LOGIN
   padding: 0.7em;
   box-sizing: border-box;
   border: 2px solid #ccc;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
   outline: none;
 }
 
@@ -634,6 +628,10 @@ PROFILO
 	border:0;
 	margin: 0;
 	padding:0.4em 0;
+}
+
+.rem legend{
+	display:none;
 }
 
 .remP{

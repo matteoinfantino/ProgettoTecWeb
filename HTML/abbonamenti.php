@@ -12,6 +12,7 @@ $_SESSION ['paginaCorr']="";
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="type"/>
 <title>Energya Fitness Club</title>
 <meta name="title" content="Energya Fitness Club"/>
 <meta name="description" content="Energya - un luogo per tutti quelli che amano la palestra e vogliono sentirsi come in famiglia!"/>
@@ -31,11 +32,8 @@ $_SESSION ['paginaCorr']="";
 
 </head>
 <body>
-  <noscript>
-    <p id="menuNoScript"><span xml:lang="en">Javascript</span> Disabilitato: Il <a href="#NoJS">men&ugrave;</a> &egrave; visualizzabile in fondo alla pagina</p>
-  </noscript>
   <div id="nav">
-    <a href="#content" id="hideLink">Vai al contenuto</a>
+    <a href="#content" id="hideLink" xml:lang="en">Skip to content</a>
 	  <div id="logo"><img src="../IMG/logo1.png" alt="Logo Energya"/></div>
     <button id="menuIcon" title="menuIcon" onclick="menuHamburger()" ><img src="../IMG/hamburger_icon.png" alt="icona menu"/></button>
 	  <ul class="menuItems" id="menuu" >
@@ -56,6 +54,10 @@ $_SESSION ['paginaCorr']="";
 	<?php require_once __DIR__ . DIRECTORY_SEPARATOR . "../PHP" . DIRECTORY_SEPARATOR . "userbar.php";
 	 ?>
 
+ <noscript>
+   <p id="menuNoScript"><span xml:lang="en">Javascript</span> Disabilitato: Il <a href="#NoJS">men&ugrave;</a> &egrave; visualizzabile in fondo alla pagina</p>
+ </noscript>
+
 	<div id="content">
 		<div id="breadcrumb">
 			<p>Ti trovi in: <span xml:lang="en">Abbonamenti</span></p>
@@ -64,14 +66,14 @@ $_SESSION ['paginaCorr']="";
 		<div class="divGenerico">
 
 			<h1>I nostri abbonamenti</h1>
-			<p>All’interno del <span xml:lang="en">Club</span> gli abbonati potranno usufruire dei numerosi ed
-         esclusivi servizi compresi nell’abbonamento, sentendosi cos&igrave; in vacanza
-         ogni giorno dell’anno in completo <span xml:lang="en">relax</span>:</p>
+			<p>All'interno del <span xml:lang="en">Club</span> gli abbonati potranno usufruire dei numerosi ed
+         esclusivi servizi compresi nell'abbonamento, sentendosi cos&igrave; in vacanza
+         ogni giorno dell'anno in completo <span xml:lang="en">relax</span>:</p>
       <ul>
         <li>Possibilit&agrave; di usufruire di tutte le sale e macchinari all'avanguardia </li>
         <li>Disponibilit&agrave; di un ampio parcheggio gratuito</li>
         <li>Servizio <span xml:lang="en">Personal Trainer</span> e cambio scheda</li>
-        <li>Thermarium – Piscina Coperta – Terrazza Estiva</li>
+        <li>Thermarium - Piscina Coperta - Terrazza Estiva</li>
       </ul>
 
 		</div>
@@ -87,7 +89,7 @@ $_SESSION ['paginaCorr']="";
       <h2>Abbonamento Trimestrale</h2>
       <p class="bold">Costo: 150 euro</p>
       <p>Con l'abbonamento trimestrale sar&agrave; possibile ottenere un'esperienza completa presso la nostra struttura risparmiando
-      più del 15%! Inoltre, in omaggio per i clienti che sottoscriveranno questo abbonamento, sar&agrave; possibile ricevere in omaggio
+      pi&ugrave; del 15%! Inoltre, in omaggio per i clienti che sottoscriveranno questo abbonamento, sar&agrave; possibile ricevere in omaggio
       un'ingresso presso il centro Benessere "Pincopallino"</p>
     </div>
 
@@ -101,7 +103,7 @@ $_SESSION ['paginaCorr']="";
     <img src="http://www.w3.org/Icons/valid-xhtml10"  alt="Valid XHTML 1.0 Strict" class="inline"/>
     <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valido!" class="inline"/>
   </div>
-  
+
   <noscript>
   	  <ul id="NoJS">
         <li><a href="index.php" xml:lang="en">Home</a></li>

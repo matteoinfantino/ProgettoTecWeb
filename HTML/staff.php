@@ -32,11 +32,8 @@ $_SESSION ['paginaCorr']="";
 
 </head>
 <body>
-  <noscript>
-    <p id="menuNoScript"><span xml:lang="en">Javascript</span> Disabilitato: Il <a href="#NoJS">menu</a> &egrave; visualizzabile in fondo alla pagina</p>
-  </noscript>
 	<div id="nav">
-    <a href="#content" id="hideLink">Vai al contenuto</a>
+    <a href="#content" id="hideLink" xml:lang="en">Skip to content</a>
 	  <div id="logo"><img src="../IMG/logo1.png" alt="Logo Energya"/></div>
     <button id="menuIcon" title="menuIcon" onclick="menuHamburger()" ><img src="../IMG/hamburger_icon.png" alt="icona menu"/></button>
 	  <ul class="menuItems" id="menuu" >
@@ -56,16 +53,23 @@ $_SESSION ['paginaCorr']="";
 
 	<?php require_once __DIR__ . DIRECTORY_SEPARATOR . "../PHP" . DIRECTORY_SEPARATOR . "userbar.php";?>
 
+  <noscript>
+    <p id="menuNoScript"><span xml:lang="en">Javascript</span> Disabilitato: Il <a href="#NoJS">menu</a> &egrave; visualizzabile in fondo alla pagina</p>
+  </noscript>
+
 	<div id="content">
 		<div id="breadcrumb">
 			<p>Ti trovi in: <span xml:lang="en">Staff</span></p>
 		</div>
 
+    <h1 class="center"><span xml:lang="en">Staff</span></h1>
+
+
     <div id="staff">
       <div class="fila">
         <img src="../IMG/p1.png" alt="personal trainer" />
         <p class="bold">Anna Zanon</p>
-        <p class="under" xml:lang="en">Step &amp; total body</p>
+        <p  xml:lang="en">Step &amp; total body</p>
         <p>
           Telefono: 3334455666
         </p>
@@ -73,7 +77,7 @@ $_SESSION ['paginaCorr']="";
       <div class="fila">
         <img src="../IMG/p2.png" alt="personal trainer" />
         <p class="bold">Valerio Rossi</p>
-        <p class="under" xml:lang="en">Funktional</p>
+        <p  xml:lang="en">Funktional</p>
         <p>
           Telefono: 3334455666
         </p>
@@ -81,7 +85,7 @@ $_SESSION ['paginaCorr']="";
       <div class="fila">
         <img src="../IMG/p3.png" alt="personal trainer" />
         <p class="bold">Giorgio Bassini</p>
-        <p class="under" xml:lang="en">Personal Trainer</p>
+        <p  xml:lang="en">Personal Trainer</p>
         <p>
           Telefono: 3334455666
         </p>
@@ -89,7 +93,7 @@ $_SESSION ['paginaCorr']="";
       <div class="fila">
         <img src="../IMG/p4.png" alt="personal trainer" />
         <p class="bold">Elena Ferrari</p>
-        <p class="under" >Ginnastica dolce</p>
+        <p  >Ginnastica dolce</p>
         <p>
           Telefono: 3334455666
         </p>
@@ -97,7 +101,7 @@ $_SESSION ['paginaCorr']="";
       <div class="fila">
         <img src="../IMG/p5.png" alt="personal trainer" />
         <p class="bold">Sofia Verdi</p>
-        <p class="under" xml:lang="en">Pound</p>
+        <p  xml:lang="en">Pound</p>
         <p>
           Telefono: 3334455666
         </p>
@@ -105,7 +109,7 @@ $_SESSION ['paginaCorr']="";
       <div class="fila">
         <img src="../IMG/p6.png" alt="personal trainer" />
         <p class="bold">Riccardo Moro</p>
-        <p class="under" xml:lang="en">Personal Trainer</p>
+        <p  xml:lang="en">Personal Trainer</p>
         <p>
           Telefono: 3334455666
         </p>
@@ -113,7 +117,7 @@ $_SESSION ['paginaCorr']="";
       <div class="fila">
         <img src="../IMG/p7.png" alt="personal trainer" />
         <p class="bold">Beatrice Lana</p>
-        <p class="under"><abbr title="Glutei, addominali, glutei">G.A.G</abbr></p>
+        <p ><abbr title="Glutei, addominali, glutei">G.A.G</abbr></p>
         <p>
           Telefono: 3334455666
         </p>
@@ -121,7 +125,7 @@ $_SESSION ['paginaCorr']="";
       <div class="fila">
         <img src="../IMG/p8.png" alt="personal trainer" />
         <p class="bold">Simone Peruzzo</p>
-        <p class="under" xml:lang="en">Fitboxe</p>
+        <p  xml:lang="en">Fitboxe</p>
         <p>
           Telefono: 3334455666
         </p>
@@ -145,7 +149,7 @@ $_SESSION ['paginaCorr']="";
   			<li><a href="abbonamenti.php">Abbonamenti</a></li>
   			<li><a href="news.php">News</a></li>
   			<li><a href="galleria.php">Galleria</a></li>
-  	    <li.png xml:lang="en">Staff</li>
+  	    <li xml:lang="en">Staff</li>
   	    <li><a href="contatti.php">Contatti</a></li>
         <?php include __DIR__ . DIRECTORY_SEPARATOR . "../PHP" . DIRECTORY_SEPARATOR . "userbar_mobile.php";?>
   	  </ul>

@@ -60,11 +60,8 @@ else {
 
 </head>
 <body>
-  <noscript>
-    <p id="menuNoScript"><span xml:lang="en">Javascript</span> Disabilitato: Il <a href="#NoJS">men&ugrave;</a> &egrave; visualizzabile in fondo alla pagina</p>
-  </noscript>
 	<div id="nav">
-    <a href="#content" id="hideLink">Vai al contenuto</a>
+    <a href="#content" id="hideLink" xml:lang="en">Skip to content</a>
 	  <div id="logo"><img src="../IMG/logo1.png" alt="Logo Energya"/></div>
     <button id="menuIcon" title="menuIcon" onclick="menuHamburger()" ><img src="../IMG/hamburger_icon.png" alt="icona menu"/></button>
 	  <ul class="menuItems" id="menuu" >
@@ -84,10 +81,16 @@ else {
 
   <?php require_once __DIR__ . DIRECTORY_SEPARATOR . "../PHP" . DIRECTORY_SEPARATOR . "userbar.php";?>
 
+  <noscript>
+    <p id="menuNoScript"><span xml:lang="en">Javascript</span> Disabilitato: Il <a href="#NoJS">men&ugrave;</a> &egrave; visualizzabile in fondo alla pagina</p>
+  </noscript>
+
 	<div id="content">
 		<div id="breadcrumb">
-			<p>Ti trovi in: Pannello di amministrazione >> Form modifica corsi</p>
+			<p>Ti trovi in: Pannello di amministrazione &gt;&gt; Form modifica corsi</p>
 		</div>
+
+    <h1 class="center">Modifica corso</h1>
 
    <form onsubmit="return checkModCorsi()" action="../PHP/post_modifica_corsi.php?id=<?php $id ?>" id="login-register-form" enctype="multipart/form-data">
      <fieldset>
@@ -116,13 +119,13 @@ else {
          <li>
            <label for="giorno">Giorno</label>
            <select id="giorno" name="giorno">
-             <option value="lunedi"<?php if ($giorno=="lunedi") echo "selected=\"selected\";" ?>>Luned&igrave;</option>
-             <option value="martedi"<?php if ($giorno=="martedi") echo "selected=\"selected\";" ?>>Martedi&igrave;</option>
-             <option value="mercoledi"<?php if ($giorno=="mercoledi") echo "selected=\"selected\";" ?>>Mercoled&igrave;</option>
-             <option value="giovedi"<?php if ($giorno=="giovedi") echo "selected=\"selected\";" ?>>Gioved&igrave;</option>
-             <option value="venerdi"<?php if ($giorno=="venerdi") echo "selected=\"selected\";" ?>>Venerd&igrave;</option>
-             <option value="sabato"<?php if ($giorno=="sabato") echo "selected=\"selected\";" ?>>Sabato</option>
-             <option value="domenica"<?php if ($giorno=="domenica") echo "selected=\"selected\";" ?>>Domenica</option>
+             <option value="lunedi"<?php if ($giorno=="lunedi") echo "selected=\"selected\""; ?>>Luned&igrave;</option>
+             <option value="martedi"<?php if ($giorno=="martedi") echo "selected=\"selected\""; ?>>Martedi&igrave;</option>
+             <option value="mercoledi"<?php if ($giorno=="mercoledi") echo "selected=\"selected\""; ?>>Mercoled&igrave;</option>
+             <option value="giovedi"<?php if ($giorno=="giovedi") echo "selected=\"selected\""; ?>>Gioved&igrave;</option>
+             <option value="venerdi"<?php if ($giorno=="venerdi") echo "selected=\"selected\""; ?>>Venerd&igrave;</option>
+             <option value="sabato"<?php if ($giorno=="sabato") echo "selected=\"selected\""; ?>>Sabato</option>
+             <option value="domenica"<?php if ($giorno=="domenica") echo "selected=\"selected\""; ?>>Domenica</option>
            </select>
          </li>
          <li>
@@ -130,8 +133,6 @@ else {
            <input id="ora" name="ora" type="text" <?php echo "value=\"".date("H:i", strtotime($ora))."\"";?> />
            <?php if(isset($_SESSION['error']['oraErr'])) { echo '<span class="error">'. $_SESSION['error']['oraErr'] .'</span>'; unset($_SESSION['error']['oraErr']); } else {echo "";} ?>
          </li>
-       </ul>
-     </fieldset>
          <li id="buttons-login">
            <?php echo '<input type="hidden" value="'.$corso['Id'].'" name="update" />' ?>
            <input value="Modifica" class="button" id="modifica" name="modifica" type="submit"/>
@@ -151,7 +152,7 @@ else {
    <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valido!" class="inline"/>
  </div>
 
- 
+
  <noscript>
  	  <ul id="NoJS">
       <li><a href="index.php" xml:lang="en">Home</a></li>

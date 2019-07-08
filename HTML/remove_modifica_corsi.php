@@ -54,11 +54,8 @@ if ((!isset($_SESSION["email"]))||($_SESSION["email"]!="admin@admin.it")){
 
 </head>
 <body>
-  <noscript>
-    <p id="menuNoScript"><span xml:lang="en">Javascript</span> Disabilitato: Il <a href="#NoJS">men&ugrave;</a> &egrave; visualizzabile in fondo alla pagina</p>
-  </noscript>
   <div id="nav">
-    <a href="#content" id="hideLink">Vai al contenuto</a>
+    <a href="#content" id="hideLink" xml:lang="en">Skip to content</a>
 	  <div id="logo"><img src="../IMG/logo1.png" alt="Logo Energya"/></div>
     <button id="menuIcon" title="menuIcon" onclick="menuHamburger()" ><img src="../IMG/hamburger_icon.png" alt="icona menu"/></button>
 	  <ul class="menuItems" id="menuu" >
@@ -78,34 +75,37 @@ if ((!isset($_SESSION["email"]))||($_SESSION["email"]!="admin@admin.it")){
 
 	<?php require_once __DIR__ . DIRECTORY_SEPARATOR . "../PHP" . DIRECTORY_SEPARATOR . "userbar.php";?>
 
+  <noscript>
+    <p id="menuNoScript"><span xml:lang="en">Javascript</span> Disabilitato: Il <a href="#NoJS">men&ugrave;</a> &egrave; visualizzabile in fondo alla pagina</p>
+  </noscript>
+
 	<div id="content">
 		<div id="breadcrumb">
-			<p>Ti trovi in: Pannello di amministrazione >> Rimozione corsi</p>
+			<p>Ti trovi in: Pannello di amministrazione &gt;&gt; Rimozione corsi</p>
 		</div>
 
 		<div class="ammin Sx">
       <h1>Rimuovi Corsi</h1>
       <p class="center">Per eliminare uno dei corsi inseriti all'interno della sezione "Corsi",
          premere il pulsante rimuovi al fianco del titolo corrispondente.</p>
-     <h2 class="successo">
-        <?php
-         if ($_SESSION ['successoR']){
-           echo "Rimozione avvenuta con successo";
-           $_SESSION ['successoR']=0;
-         }
-         else{
-           echo "";
-         }
+         <?php
+          if ($_SESSION ['successoR']){
+            echo "<h2 class=\"successo\">Rimozione avvenuta con successo</h2>";
+            $_SESSION ['successoR']=0;
+          }
+          else{
+            echo "";
+          }
         ?>
-      </h2>
       <?php
           if(!empty($listaCorsi))
             foreach ($listaCorsi as $corsi) {
               echo'
                 <form class="rem" action="../PHP/post_remove_corsi.php?id='.$corsi['Id'].'">
                 <fieldset>
-                  <label class="remP">'.$corsi['Titolo'].'</label><input type="hidden" value="'.$corsi['Id'].'" name="rimuovi"></input>
-                  <input type="submit" class="button" value="Rimuovi  '.$corsi['Titolo'].'" name="submit"></input>
+                <legend>Rimuovi corso</legend>
+                  <label class="remP" for="rimuovi'.$corsi['Id'].'">'.$corsi['Titolo'].'</label><input type="hidden" value="'.$corsi['Id'].'" name="rimuovi"></input>
+                  <input type="submit" id="rimuovi'.$corsi['Id'].'" class="button" value="Rimuovi  '.$corsi['Titolo'].'" name="submit"></input>
                 </fieldset>
                 </form>';
           }?>
@@ -114,25 +114,24 @@ if ((!isset($_SESSION["email"]))||($_SESSION["email"]!="admin@admin.it")){
       <h1>Modifica Corsi</h1>
       <p class="center">Per modificare uno dei corsi inseriti all'interno della sezione "Corsi",
          premere il pulsante modifica al fianco del titolo corrispondente.</p>
-     <h2 class="successo">
-        <?php
-         if ($_SESSION ['successoM']){
-           echo "Modifica avvenuta con successo";
-           $_SESSION ['successoM']=0;
-         }
-         else{
-           echo "";
-         }
+         <?php
+          if ($_SESSION ['successoM']){
+            echo "<h2 class=\"successo\">Modifica avvenuta con successo</h2>";
+            $_SESSION ['successoM']=0;
+          }
+          else{
+            echo "";
+          }
         ?>
-      </h2>
       <?php
       if(!empty($listaCorsi))
         foreach ($listaCorsi as $corsi) {
           echo'
             <form class="rem" action="modifica_corsi_form.php?id='.$corsi['Id'].'">
             <fieldset>
-              <label class="remP">'.$corsi['Titolo'].'</label><input type="hidden" value="'.$corsi['Id'].'" name="modifica"></input>
-              <input type="submit" class="button" value="Modifica '.$corsi['Titolo'].'" name="submit"></input>
+            <legend>Modifica corso</legend>
+              <label class="remP" for="modifica'.$corsi['Id'].'">'.$corsi['Titolo'].'</label><input type="hidden" value="'.$corsi['Id'].'" name="modifica"></input>
+              <input type="submit" id="modifica'.$corsi['Id'].'" class="button" value="Modifica '.$corsi['Titolo'].'" name="submit"></input>
             </fieldset>
             </form>';
           }
