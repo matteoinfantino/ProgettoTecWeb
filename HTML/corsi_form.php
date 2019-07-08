@@ -123,8 +123,16 @@ $_SESSION ['paginaCorr']="";
 		</form>
 	</div>
 
-  <?php require_once __DIR__ . DIRECTORY_SEPARATOR . "footer.html"; ?>
+  <div id="footer">
+    <p>Sito <abbr xml:lang="en" title="World Wide Web">Web</abbr> realizzato da: </p>
+    <p>Matteo Infantino</p>
+    <p>Simone Franconetti</p>
+    <p>Luca Marcon</p>
+    <img src="http://www.w3.org/Icons/valid-xhtml10"  alt="Valid XHTML 1.0 Strict" class="inline"/>
+    <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valido!" class="inline"/>
+  </div>
 
+  
   <noscript>
   	  <ul id="NoJS">
         <li><a href="index.php" xml:lang="en">Home</a></li>

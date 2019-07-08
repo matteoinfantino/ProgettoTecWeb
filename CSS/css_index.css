@@ -44,13 +44,8 @@ p{
 }
 
 a{
-	/* color: #BA5C00; */
 	font-weight: bold;
 }
-/*
-a:visited{
-	color: #D57C00;
-} */
 
 #hideLink{
 	position:absolute;
@@ -64,6 +59,10 @@ a:visited{
 
 .noDec{
 	padding:0.5em;
+}
+
+.inline{
+	display:inline;
 }
 
 /*****
