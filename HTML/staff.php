@@ -63,7 +63,7 @@ $_SESSION ['paginaCorr']="";
 
     <div id="staff">
       <div class="fila">
-        <img src="../IMG/p1" alt="personal trainer" />
+        <img src="../IMG/p1.png" alt="personal trainer" />
         <p class="bold">Anna Zanon</p>
         <p class="under" xml:lang="en">Step &amp; total body</p>
         <p>
@@ -71,7 +71,7 @@ $_SESSION ['paginaCorr']="";
         </p>
       </div>
       <div class="fila">
-        <img src="../IMG/p2" alt="personal trainer" />
+        <img src="../IMG/p2.png" alt="personal trainer" />
         <p class="bold">Valerio Rossi</p>
         <p class="under" xml:lang="en">Funktional</p>
         <p>
@@ -79,7 +79,7 @@ $_SESSION ['paginaCorr']="";
         </p>
       </div>
       <div class="fila">
-        <img src="../IMG/p3" alt="personal trainer" />
+        <img src="../IMG/p3.png" alt="personal trainer" />
         <p class="bold">Giorgio Bassini</p>
         <p class="under" xml:lang="en">Personal Trainer</p>
         <p>
@@ -87,7 +87,7 @@ $_SESSION ['paginaCorr']="";
         </p>
       </div>
       <div class="fila">
-        <img src="../IMG/p4" alt="personal trainer" />
+        <img src="../IMG/p4.png" alt="personal trainer" />
         <p class="bold">Elena Ferrari</p>
         <p class="under" >Ginnastica dolce</p>
         <p>
@@ -95,7 +95,7 @@ $_SESSION ['paginaCorr']="";
         </p>
       </div>
       <div class="fila">
-        <img src="../IMG/p5" alt="personal trainer" />
+        <img src="../IMG/p5.png" alt="personal trainer" />
         <p class="bold">Sofia Verdi</p>
         <p class="under" xml:lang="en">Pound</p>
         <p>
@@ -103,7 +103,7 @@ $_SESSION ['paginaCorr']="";
         </p>
       </div>
       <div class="fila">
-        <img src="../IMG/p6" alt="personal trainer" />
+        <img src="../IMG/p6.png" alt="personal trainer" />
         <p class="bold">Riccardo Moro</p>
         <p class="under" xml:lang="en">Personal Trainer</p>
         <p>
@@ -111,7 +111,7 @@ $_SESSION ['paginaCorr']="";
         </p>
       </div>
       <div class="fila">
-        <img src="../IMG/p7" alt="personal trainer" />
+        <img src="../IMG/p7.png" alt="personal trainer" />
         <p class="bold">Beatrice Lana</p>
         <p class="under"><abbr title="Glutei, addominali, glutei">G.A.G</abbr></p>
         <p>
@@ -119,7 +119,7 @@ $_SESSION ['paginaCorr']="";
         </p>
       </div>
       <div class="fila">
-        <img src="../IMG/p8" alt="personal trainer" />
+        <img src="../IMG/p8.png" alt="personal trainer" />
         <p class="bold">Simone Peruzzo</p>
         <p class="under" xml:lang="en">Fitboxe</p>
         <p>
@@ -139,7 +139,7 @@ $_SESSION ['paginaCorr']="";
   			<li><a href="abbonamenti.php">Abbonamenti</a></li>
   			<li><a href="news.php">News</a></li>
   			<li><a href="galleria.php">Galleria</a></li>
-  	    <li xml:lang="en">Staff</li>
+  	    <li.png xml:lang="en">Staff</li>
   	    <li><a href="contatti.php">Contatti</a></li>
         <?php include __DIR__ . DIRECTORY_SEPARATOR . "../PHP" . DIRECTORY_SEPARATOR . "userbar_mobile.php";?>
   	  </ul>
