@@ -103,8 +103,8 @@ function valTesto($testo){
 
 function valDidascalia($testo){
   $testoErr="";
-  if (!preg_match("/^.{0,40}$/",$testo)) {
-    $testoErr = "La didascalia dell'immagine deve essere di massimo 40 caratteri";
+  if (!preg_match("/^.{0,30}$/",$testo)) {
+    $testoErr = "La didascalia dell'immagine deve essere di massimo 30 caratteri";
   }
   return $testoErr;
 }

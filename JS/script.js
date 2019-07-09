@@ -184,7 +184,7 @@ function checkAlt(testoInput) {
   }
 
   function checkDidascalia(testoInput) {
-      var pattern=/^.{1,40}$/;
+      var pattern=/^.{1,30}$/;
       if (pattern.test(testoInput.value)){
         togliErrore(testoInput);
         return true;
@@ -193,7 +193,7 @@ function checkAlt(testoInput) {
         if (testoInput.value=="")
           mostraErrore(testoInput, "Il campo testo non può essere vuoto");
         else {
-          mostraErrore(testoInput, "La didascalia dell'immagine deve essere di massimo 40 caratteri");
+          mostraErrore(testoInput, "La didascalia dell'immagine deve essere di massimo 30 caratteri");
           }
         return false;
       }
